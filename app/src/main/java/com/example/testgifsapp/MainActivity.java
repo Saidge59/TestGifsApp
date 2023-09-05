@@ -6,6 +6,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.testgifsapp.domain.DataResult;
+import com.example.testgifsapp.service.MyService;
+
+import retrofit2.Call;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -16,5 +21,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView rView = findViewById(R.id.recyclerView);
         rView.setLayoutManager(new GridLayoutManager(this, 3));
         rView.setHasFixedSize(true);
+
+        MyService service = new MyService();
+        Call<DataResult> call = service.init();
     }
 }
