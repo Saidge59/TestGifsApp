@@ -1,12 +1,15 @@
 package com.example.testgifsapp.service;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.testgifsapp.domain.*;
+import com.example.testgifsapp.adapter.DataAdapter;
+import com.example.testgifsapp.domain.Data;
+import com.example.testgifsapp.domain.DataResult;
+import com.example.testgifsapp.domain.Images;
+import com.example.testgifsapp.domain.UrlImg;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +25,7 @@ public class MyCallback implements Callback<DataResult> {
     private Context ctx;
     private RecyclerView rView;
     private List<UrlImg> dataModelArrayList;
+    private DataAdapter dataAdapter;
 
     public MyCallback(Context ctx, RecyclerView textView) {
         this.ctx = ctx;
@@ -43,6 +47,9 @@ public class MyCallback implements Callback<DataResult> {
             UrlImg urlImg = images.getUrlImg();
             dataModelArrayList.add(urlImg);
         }
+
+        dataAdapter = new DataAdapter(ctx, dataModelArrayList);
+        rView.setAdapter(dataAdapter);
 
     }
 
