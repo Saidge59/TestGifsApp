@@ -1,15 +1,14 @@
 package com.example.testgifsapp.service;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.testgifsapp.SecondActivity;
 import com.example.testgifsapp.adapter.DataAdapter;
-import com.example.testgifsapp.domain.Data;
-import com.example.testgifsapp.domain.DataResult;
-import com.example.testgifsapp.domain.Images;
-import com.example.testgifsapp.domain.UrlImg;
+import com.example.testgifsapp.domain.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +49,13 @@ public class MyCallback implements Callback<DataResult> {
 
         dataAdapter = new DataAdapter(ctx, dataModelArrayList);
         rView.setAdapter(dataAdapter);
+        dataAdapter.setOnItemClickListener(pos -> {
+                Intent intent = new Intent(ctx, SecondActivity.class);
+                UrlImg urlImg = dataModelArrayList.get(pos);
 
+                intent.putExtra("imageUrl", urlImg.getUrl());
+                ctx.startActivity(intent);
+            });
     }
 
     @Override
