@@ -7,6 +7,13 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
+/**
+ * SecondActivity creates a full-screen display for the selected gifs.
+ *
+ * @author Shesternyak Denis
+ * @version 0.0.1
+ */
+
 public class SecondActivity extends AppCompatActivity {
 
     @Override

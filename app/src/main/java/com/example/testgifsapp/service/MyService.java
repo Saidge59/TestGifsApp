@@ -6,6 +6,13 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/**
+ * MyService initializes the object of interaction with REST API.
+ *
+ * @author Shesternyak Denis
+ * @version 0.0.1
+ */
+
 public class MyService {
     private static final String API_KEY = "zXHFGCkDfOA3qPR56L8Kvd58t4Mp8Gt8";
     private static final String BASE_URL = "https://api.giphy.com/v1/gifs/";

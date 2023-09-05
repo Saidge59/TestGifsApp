@@ -15,6 +15,13 @@ import com.example.testgifsapp.domain.UrlImg;
 
 import java.util.List;
 
+/**
+ * DataAdapter class that binds a data source to a list.
+ *
+ * @author Shesternyak Denis
+ * @version 0.0.1
+ */
+
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     Context ctx;

@@ -12,6 +12,13 @@ import com.example.testgifsapp.service.MyService;
 
 import retrofit2.Call;
 
+/**
+ * MainActivity creates an optimized list to display a list of gifs.
+ *
+ * @author Shesternyak Denis
+ * @version 0.0.1
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

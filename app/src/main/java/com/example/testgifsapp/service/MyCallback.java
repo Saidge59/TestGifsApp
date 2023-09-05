@@ -17,6 +17,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * MyCallback receives a response or error from the server.
+ *
+ * @author Shesternyak Denis
+ * @version 0.0.1
+ */
+
 public class MyCallback implements Callback<DataResult> {
 
     public static final String TAG = "MyCallback";
